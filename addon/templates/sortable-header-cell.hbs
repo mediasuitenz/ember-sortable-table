@@ -1,0 +1,18 @@
+<div class="ember-table-content-container" {{action "sortByColumn" view.content}}>
+  <span class="ember-table-content blueee">
+    {{view.content.headerCellName}}
+    {{#if view.content.supportSort}}
+      <div style="float:right;">
+        {{#if view.content.sorted}}
+          {{#if sortAscending}}
+              {{!-- Arrow points up --}}
+              &#9950;
+          {{else}}
+              {{!-- Arrow points down --}}
+              &#9660;
+          {{/if}}
+        {{/if}}
+      </div>
+    {{/if}}
+  </span>
+</div>

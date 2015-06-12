@@ -1,0 +1,1 @@
+export { default } from 'ember-sortable-table/views/sortable-header-cell';

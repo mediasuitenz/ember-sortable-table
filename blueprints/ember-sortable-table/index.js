@@ -14,5 +14,8 @@ module.exports = {
 
    afterInstall: function(options) {
      return this.addAddonToProject({name: 'ember-table', target: '0.5.0'})
+   },
+   isDevelopingAddon: function() {
+    return true;
    }
 };
