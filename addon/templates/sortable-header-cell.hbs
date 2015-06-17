@@ -1,0 +1,23 @@
+<div class="ember-table-content-container" {{action "sortByColumn" view.content}}>
+  <span class="ember-table-content">
+    {{view.content.headerCellName}}
+    {{#if view.content.supportRowSort}}
+      <div style="float:right;">
+        {{#if view.content.sorted}}
+          {{#if view.content.sortAscending}}
+              {{!-- Arrow points up --}}
+              <img src="data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIRnC2nKLnT4or00Puy3rx7VQAAOw==">
+              {{!-- &#9650; --}}
+          {{else}}
+              {{!-- Arrow points down --}}
+              <img src="data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIPnI+py+0/hJzz0IruwjsVADs=">
+              {{!-- &#9660; --}}
+          {{/if}}
+        {{else}}
+          {{!-- Arrow points both up and down to indicate we can sort --}}
+          <img src="data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIUnC2nKLnT4or00PvyrQwrPzUZshQAOw==">
+        {{/if}}
+      </div>
+    {{/if}}
+  </span>
+</div>
