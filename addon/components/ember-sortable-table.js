@@ -91,6 +91,13 @@ export default EmberTableComponent.extend({
   content: Ember.computed.sort('rows', 'attrToSortRowsBy'),
 
   /**
+   * Bubble up an action to the container letting it know that the row sort has changed
+   */
+  onSortObserver: Ember.observer('content.firstObject', function () {
+    this.sendAction('onSort', this.get('content'));
+  }),
+
+  /**
    * The procedure to properly assign a new sortColumn, replacing the old one.
    * @param  {ColumnDefinition} column The ColumnDefinition object
    */
